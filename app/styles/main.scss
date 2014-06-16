@@ -28,13 +28,21 @@ a.titlebar {
     text-decoration: none;
 }
 
-.content {
+.contentHide {
+    margin: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+.contentShow {
     color: #797D81;
     font-size: 17px;
     padding: 30px;
     border: 1px solid #00BBCA;
     margin: 0px;
+    transition: all 0.3sec ease;
 }
+
 
 .collapse {
   @include animation(scale 1.0s ease-in, slide 2.0s ease);
