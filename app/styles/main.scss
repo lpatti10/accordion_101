@@ -1,6 +1,8 @@
+@import 'bourbon/bourbon';
+
 body {
     background-color: #ffffff;
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
 }
 .container {
     width: 100%;
@@ -11,7 +13,7 @@ body {
     width: 600px;
 }
 
-.titlebar {
+.title {
     background-color: #0AC8D7;
     color: #ffffff;
     border: 1px solid #00BBCA;
@@ -20,18 +22,22 @@ body {
     padding-top: 10px;
     font-size: 24px;
     margin: 0px;
-    h2 {
-        font-weight: normal;
+}
 
-    }
+a.titlebar {
+    text-decoration: none;
 }
 
 .content {
     color: #797D81;
-    font-size: 15px;
+    font-size: 17px;
     padding: 30px;
     border: 1px solid #00BBCA;
     margin: 0px;
+}
+
+.collapse {
+  @include animation(scale 1.0s ease-in, slide 2.0s ease);
 }
 
 /*
