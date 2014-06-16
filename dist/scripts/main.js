@@ -1,0 +1,1 @@
+$("a.titlebar").on("click",function(){$("p.contentHide").toggleClass("contentShow","contentHide")});

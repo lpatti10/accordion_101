@@ -32,6 +32,7 @@ a.titlebar {
     margin: 0px;
     height: 0px;
     overflow: hidden;
+    padding: none;
 }
 
 .contentShow {
@@ -40,13 +41,12 @@ a.titlebar {
     padding: 30px;
     border: 1px solid #00BBCA;
     margin: 0px;
-    transition: all 0.3sec ease;
+    transition: all 0.3s ease;
+    height: auto;
 }
 
 
-.collapse {
-  @include animation(scale 1.0s ease-in, slide 2.0s ease);
-}
+
 
 /*
 .hero-unit {
