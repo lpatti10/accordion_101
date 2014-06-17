@@ -48,28 +48,53 @@ a.titlebar {
 
 
 
-/*
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-    h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-    }
+/* TIM"S
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+    color: #6F6C6C;
+    font-size: 14px;
+    line-height: 18px;
 }
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.accordion {
+  margin: 0 auto;
+  max-width: 500px;
+
+  header {
+    line-height: 1.2;
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: rgb(19, 199, 214);
+    color: white;
+    font-weight: lighter;  
+    @include transition(all 0.1s ease-in-out);
+    &:hover {
+      background-color: rgb(19, 219, 234);
+    }
+  }
+  
+  section {
+    overflow: hidden;
+    height: 180px;
+    border: 1px solid #11B4C2;
+    border-bottom: none;  
+    @include transition(height 0.9s ease-in-out);
+
+    &:last-child {
+      border-bottom: 1px solid #11B4C2;}
+    
+    &.hidden {
+      height: 40px;
+    }
+  }
+  
+  p {
+    padding: 10px 20px;
+  }
 }
 
 */

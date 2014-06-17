@@ -1,5 +1,37 @@
+//CORRECT ANSWER IS
+$('header').on('click', function () {
+  $(this).parent().removeClass('hidden').siblings().addClass('hidden');
+});
 
+// Could be EVEN BETTER this way!!
+
+$('header').on('click', function () {
+  
+  var h = $(this).parent().height();
+  
+  if (h === 180) {
+    $(this).parent().addClass('hidden');
+  } else {             
+    $(this).parent().removeClass('hidden').siblings().addClass('hidden');  
+  }
+ 
+});
+
+
+
+
+//OR Michael's solution, better method to prevent double-binding:
+$('.accordion').on('click', 'h2', function () {
+  $(this).parent().removeClass('hidden').siblings().addClass('hidden');
+});
+
+// My best shot...
 /*
+$('a.titlebar').on('click', function() {
+      $(this).next().toggleClass('contentShow');
+      $(".accordion-content").not($(this).next()).removeClass('contentShow');
+});
+
 // Successful at single-click expansion
 $('a.titlebar').on('click', function() {
 	$('p.contentHide').removeClass('contentHide').addClass('contentShow');
@@ -41,6 +73,8 @@ $('a.titlebar').on('click', function() {
 		$(this).parents().siblings('p.contentHide').addClass('contentShow');
     $(this).parents('p.contentHide').removeClass('contentShow');
 });
+
+
 */
 
 // SUCCESS, but havent figured out the conditional
@@ -50,10 +84,6 @@ $('a.titlebar').on('click', function() {
 });
 */
 
-$('a.titlebar').on('click', function() {
-		  $(this).next().toggleClass('contentShow');
-      $(".accordion-content").not($(this).next()).removeClass('contentShow');
-});
 
 
 
